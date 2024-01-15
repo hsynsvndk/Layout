@@ -1,0 +1,80 @@
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* X işareti için */
+  width: 100%;
+}
+
+.inner-box-header {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+}
+
+.inner-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.icon-x, .icon-normal, .title {
+  margin: 5px 0;
+}
+
+
+
+.icon-x {
+  cursor: pointer; /* Eğer tıklanabilir olmasını isterseniz */
+}
+
+.icon-normal {
+  font-size: 24px; /* İkon boyutu */
+}
+
+.title {
+  font-weight: bold;
+}
+
+
+/* Büyük ekranlar için genel stil */
+.card {
+  margin-bottom: 15px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Ekran boyutuna göre farklı stiller */
+/* Büyük ekranlar (genişlik 1219px ve üzeri) */
+@media (min-width: 1219px) {
+  .card .icon-normal, .card .title {
+      font-size: x-large;
+  }
+}
+
+/* Orta boy ekranlar (genişlik 1033px - 1218px) */
+@media (min-width: 1033px) and (max-width: 1218px) {
+  .card .icon-normal, .card .title {
+      font-size: large;
+  }
+}
+
+/* Küçük ekranlar (genişlik 768px - 1032px) */
+@media (min-width: 768px) and (max-width: 1032px) {
+  .card {
+      /* Küçük ekranlar için özelleştirilmiş stil */
+  }
+  .card .icon-normal, .card .title {
+      font-size: medium;
+  }
+}
+
+/* Çok küçük ekranlar (genişlik 767px ve altı) */
+@media (max-width: 767px) {
+  .card {
+      /* Çok küçük ekranlar için özelleştirilmiş stil */
+  }
+  .card .icon-normal, .card .title {
+      font-size: small;
+  }
+}
